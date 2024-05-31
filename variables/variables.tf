@@ -1,42 +1,42 @@
 variable "image_id" {
   type        = string
-  default = "ami-090252cbe067a9e58" #optional
-  description = "RHEL - ami." #optional
+  default     = "ami-090252cbe067a9e58" #optional
+  description = "RHEL - ami."           #optional
 }
 
 variable "instance_type" {
-    default = "t3.micro"
-    type = string
-  
+  default = "t3.micro"
+  type    = string
+
 }
 
 variable "tags" {
-    default = {
-        Project = "Expense"
-        Environment = "Dev"
-        Module = "DB"
-        Name = "DB"
-    }
+  default = {
+    Project     = "Expense"
+    Environment = "Dev"
+    Module      = "DB"
+    Name        = "DB"
+  }
 }
 
 variable "sg_group" {
-    default = "allow ssh"
-  
+  default = "allow ssh"
+
 }
 variable "sg_description" {
-    default = "allowing port 22"
-  
+  default = "allowing port 22"
+
 }
 variable "ssh_port" {
-    default = 22
-  
+  default = 22
+
 }
 variable "protocal" {
-    default = "tcp"
-  
+  default = "tcp"
+
 }
 variable "allow_cidr" {
-    type = list(string)
-    default = ["0.0.0.0/0"]
-  
+  type    = list(string)
+  default = ["0.0.0.0/0"]
+
 }
